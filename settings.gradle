@@ -1,0 +1,3 @@
+rootProject.name = "Kotlin Animation Extension"
+include ':app'
+include ':animation-kotlin-extension'

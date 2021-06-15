@@ -19,7 +19,7 @@ dependencies {
 ```
 # Library Usage
 You can use the animations just as adding them as extension to your views. Works only in Kotlin.
-```java
+```kotlin
 // Adding Scale In Animation
 binding.imageView.addScaleInAnimation(duration = 900)
 

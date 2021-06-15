@@ -6,6 +6,27 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 
 /**
+ * View Extension To Add Shake Animation To Your Views
+ * @author Norman Jay Palisoc
+ * @param context application context needed in loading resource animations
+ * @param fillAfter by default (true), tells if the animated view will stay in its animated position
+ * @param repeatCount by default (5), tells how many shake animation will be done
+ * @param animationListener by default (null), to monitor the animation by way of its listener in your own implementation
+ */
+fun View.addShakeAnimation(
+    context: Context,
+    fillAfter: Boolean = true,
+    repeatCount: Int = 5,
+    animationListener: Animation.AnimationListener?
+) {
+    val animation: Animation = AnimationUtils.loadAnimation(context, R.anim.shrink_animation)
+    animation.fillAfter = fillAfter
+    animation.repeatCount = repeatCount
+    animation.setAnimationListener(animationListener)
+    startAnimation(animation)
+}
+
+/**
  * View Extension To Add Push Down In Animation To Your Views
  * @author Norman Jay Palisoc
  * @param context application context needed in loading resource animations
